@@ -12,8 +12,8 @@ const taintStyles: Record<string, string> = {
 type Row = { call: ToolCall; phase: 0 | 1 | 2 | 3 };
 
 export function DemoPanel() {
-  const [active, setActive] = useState(scenarios[0]);
-  const [task, setTask] = useState(scenarios[0].task);
+  const [active, setActive] = useState(scenarios[0]!);
+  const [task, setTask] = useState(scenarios[0]!.task);
   const [rows, setRows] = useState<Row[]>([]);
   const [running, setRunning] = useState(false);
   const timers = useRef<ReturnType<typeof setTimeout>[]>([]);

@@ -21,7 +21,7 @@ export const Route = createFileRoute("/architecture")({
 });
 
 function ArchitecturePage() {
-  const [profileId, setProfileId] = useState(profiles[0].id);
+  const [profileId, setProfileId] = useState(profiles[0]!.id);
   const profile = profiles.find((p) => p.id === profileId)!;
 
   return (
